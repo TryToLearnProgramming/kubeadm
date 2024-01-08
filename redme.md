@@ -43,7 +43,7 @@ After successfully perform step1 and 2 -
 Step 4:
 Join worker node with master node -> after run kubeadm init it will return a command to a token
 	
-	kubeadm join 192.168.31.210:6443 --token xdjkhz.dc756fla4ln9u2g6 --discovery-token-ca-cert-hash sha256:ccd2a0a0e1dc6deed2a6b6d712751e535ae706dd901466910e91e596fb730999
+	kubeadm join 192.168.xx.xx:6443 --token xdjkhz.dc756fla4ln9u2g6 --discovery-token-ca-cert-hash sha256:ccd2a0a0e1dc6deed2a6b6d712751e535ae706dd901466910e91e596fb730999
 	
 Step 5:
 After successfully join them, then need to install a CN. Caloco is a prefarable one
@@ -71,7 +71,7 @@ Configure IP pools in metalLB (yaml):
 		namespace: metallb-system
 	spec:
 		addresses:
-		- 192.168.31.203-192.168.31.209 #IP addresses other than node IPs not in DHCP range
+		- 192.168.xx.xx-192.168.xx.xx #IP addresses other than node IPs not in DHCP range
 		
 	---
 	
